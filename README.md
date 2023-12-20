@@ -1,27 +1,79 @@
 # QuickCartCalc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+QuickCartCalc es una aplicación web simple para gestionar compras y calcular el subtotal. Está construida utilizando Angular para el frontend y ASP.NET Core con Entity Framework Core para el backend.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Listar Compras:** Ver una lista de compras con detalles del producto.
 
-## Code scaffolding
+2. **Agregar Compra:** Añadir una nueva compra con detalles del producto, cantidad y precio.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. **Eliminar Compra:** Quitar una compra de la lista.
 
-## Build
+4. **Calcular Subtotal:** Ver el monto total calculado en función de la cantidad y el precio de cada compra.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+5. **Eliminar Todas las Compras:** Borrar todas las compras de la lista.
 
-## Running unit tests
+## Tecnologías Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular:** Desarrollo del frontend.
+- **ASP.NET Core:** Desarrollo del backend.
+- **Entity Framework Core:** Gestión de la base de datos.
+- **SQL Server:** Almacenamiento de la base de datos.
 
-## Running end-to-end tests
+## Instalación
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clonar el repositorio:
 
-## Further help
+   ```bash
+   git clone https://github.com/your-username/QuickCartCalc.git
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Navegar a la carpeta de la aplicación Angular:
+
+   ```bash
+   cd QuickCartCalc/QuickCartCalcClient
+   ```
+
+3. Instalar dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Ejecutar la aplicación Angular:
+
+   ```bash
+   ng serve
+   ```
+
+5. Navegar a la carpeta de la aplicación ASP.NET Core:
+
+   ```bash
+   cd ../QuickCartCalc/QuickCartCalcServer
+   ```
+
+6. Ejecutar la aplicación ASP.NET Core:
+
+   ```bash
+   dotnet run
+   ```
+
+7. Acceder a la aplicación en tu navegador:
+
+   [http://localhost:4200/](http://localhost:4200/)
+
+## Uso
+
+1. Agregar compras utilizando el formulario en la página.
+2. Ver la lista de compras.
+3. Calcular el subtotal.
+4. Eliminar compras individualmente o truncar la lista completa.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes sugerencias para mejorar, por favor crea un problema (issue) o envía una solicitud de extracción (pull request).
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.

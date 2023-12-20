@@ -27,8 +27,9 @@
     </div>
 
     <div class="text-center mb-3">
-      <button type="submit" class="btn btn-primary">Agregar a la compra</button>
-      <a href="" class="btn btn-danger">Limpiar Tabla</a>
+      <button type="submit" class="btn btn-primary me-5">Agregar a la compra</button>
+      <button (click)="truncateCompras()" class="btn btn-danger">Limpiar Tabla</button>
+      
     </div>
   </form>
 
@@ -50,7 +51,7 @@
       <table class="table table-striped">
         <thead class="table-dark text-center table-header">
           <tr>
-            <th scope="col">#</th>
+            
             <th scope="col">Producto</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Precio/unidad</th>
@@ -62,20 +63,19 @@
 
           @for (compra of compras | filter: searchTerm | paginate: { itemsPerPage: itemsPerPage, currentPage: p, totalItems: compras.length } ; track $index) {
           <tr>
-            <td class="margencolum" scope="row">{{ compra.id }}</td>
-            <td class="margencolum">{{ compra.producto }}</td>
-            <td class="margencolum">{{ compra.cantidad }}</td>
-            <td class="margencolum">{{ compra.precio }}</td>
-            <td class="margencolum">{{ compra.subtotal }}</td>
-            <td class="margencolum" scope="row" class="d-flex justify-content-center"
+            
+            <td class="text-center p-4">{{ compra.producto }}</td>
+            <td class="text-center p-4">{{ compra.cantidad }}</td>
+            <td class="text-center p-4">{{ compra.precio }}</td>
+            <td class="text-center p-4">{{ compra.subtotal }}</td>
+            <td class="text-center p-4" scope="row" class="d-flex justify-content-center"
               style="gap: 1rem; padding: 1.5rem 0.5rem;">
               <button (click)="deleteCompra(compra.id)" class="btn btn-danger"><i
                   class="bi bi-trash3-fill"></i></button>
             </td>
           </tr>
           }@empty {
-          <!-- TODO: -->
-          <div class="alert alert-warning text-center ">No hay registros</div>
+          <div class="alert alert-warning text-center" style="width: 350% !important;" >No hay registros</div>
           }
 
 
@@ -83,13 +83,14 @@
       </table>
 
       <!-- Paginación de ngx-pagination -->
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
 
     </div>
 
   </div>
 
-  <h5>Total Acumulado: $ </h5>
+  <h5>Total Acumulado: $ {{totalCantidad}} </h5>
+  
 
 </div>
 
